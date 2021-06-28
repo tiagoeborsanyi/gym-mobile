@@ -35,8 +35,103 @@ class _DashboardScreenState extends State<DashboardScreen> {
           )
         ],
       ),
-      body: Container(
-        child: Text('conteudo home'),
+      body: Column(
+        children: [
+          Container(
+            height: 85,
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.grey,
+                  width: 2,
+                ),
+                top: BorderSide(
+                  color: Colors.grey,
+                  width: 2,
+                ),
+              ),
+            ),
+            child: Row(
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 110,
+                  // margin: EdgeInsets.only(right: 8, left: 8.0),
+                  // decoration: BoxDecoration(
+                  //   border: Border(
+                  //     right: BorderSide(
+                  //       color: Colors.grey,
+                  //       width: 2,
+                  //     ),
+                  //   ),
+                  // ),
+                  child: Column(
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '25',
+                        style: TextStyle(fontSize: 25.0),
+                      ),
+                      Text(
+                        'Workouts completed',
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 110,
+                  // margin: EdgeInsets.only(right: 8, left: 8.0),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        color: Colors.grey,
+                        width: 2,
+                      ),
+                      left: BorderSide(
+                        color: Colors.grey,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        '103',
+                        style: TextStyle(fontSize: 25.0),
+                      ),
+                      Text(
+                        'Workouts completed',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 110,
+                  // margin: EdgeInsets.only(right: 8, left: 8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '70Kg',
+                        style: TextStyle(fontSize: 25.0),
+                      ),
+                      Text(
+                        'Workouts completed',
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (int i) {},
