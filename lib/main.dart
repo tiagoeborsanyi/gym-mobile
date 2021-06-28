@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'screens/dashboard_screen.dart';
+import 'utils/app_routes.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -16,38 +19,9 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFFF8300),
         canvasColor: Color.fromRGBO(255, 255, 255, 1),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Gym Workout',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          backgroundColor: Colors.white,
-          elevation: 0,
-          actions: [
-            Container(
-              width: 50,
-              height: 50,
-              // color: Colors.amber,
-              margin: EdgeInsets.only(right: 20),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.amber,
-              ),
-              child: Text(''),
-            )
-          ],
-        ),
-        body: Center(
-          child: ElevatedButton(
-            child: Text('bbotao'),
-            onPressed: () {},
-          ),
-        ),
-      ),
+      routes: {
+        AppRoutes.HOME: (ctx) => DashboardScreen(),
+      },
     );
   }
 }
