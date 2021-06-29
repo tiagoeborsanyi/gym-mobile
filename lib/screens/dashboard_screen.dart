@@ -30,9 +30,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
             margin: EdgeInsets.only(right: 20),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.amber,
+              color: Colors.grey.shade400,
             ),
-            child: Text(''),
+            child: IconButton(
+              icon: Icon(Icons.person),
+              tooltip: 'Profile',
+              onPressed: () {},
+            ),
           )
         ],
       ),
@@ -198,6 +202,44 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 )
               ],
             ),
+          ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'MY WORKOUT',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.grey.shade600),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Show All',
+                        style: TextStyle(fontSize: 19),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 200,
+                width: double.infinity,
+                margin: EdgeInsets.only(left: 20, right: 20),
+                decoration: BoxDecoration(color: Colors.grey.shade300),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('data'),
+                  ],
+                ),
+              )
+            ],
           )
         ],
       ),
