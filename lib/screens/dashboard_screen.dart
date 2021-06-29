@@ -259,12 +259,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
             label: 'Graphs',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
-            label: 'Bag',
+            icon: Icon(Icons.clear_all_outlined),
+            label: 'List exercises',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'Calendar',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
       ),
