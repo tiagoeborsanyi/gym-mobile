@@ -198,7 +198,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ],
                 ),
                 Container(
-                  child: Icon(Icons.arrow_right),
+                  child: Icon(
+                    Icons.keyboard_arrow_right_outlined,
+                    size: 35,
+                  ),
                 )
               ],
             ),
