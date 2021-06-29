@@ -13,10 +13,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Gym Workout',
+          'Dashboard',
           style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
+            color: Colors.grey.shade700,
+            fontWeight: FontWeight.w900,
+            fontSize: 25,
           ),
         ),
         backgroundColor: Colors.white,
@@ -37,16 +38,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
       body: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           Container(
-            height: 85,
+            height: 100,
             decoration: BoxDecoration(
               border: Border(
                 bottom: BorderSide(
-                  color: Colors.grey,
+                  color: Colors.grey.shade300,
                   width: 2,
                 ),
                 top: BorderSide(
-                  color: Colors.grey,
+                  color: Colors.grey.shade300,
                   width: 2,
                 ),
               ),
@@ -87,11 +91,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   decoration: BoxDecoration(
                     border: Border(
                       right: BorderSide(
-                        color: Colors.grey,
+                        color: Colors.grey.shade300,
                         width: 2,
                       ),
                       left: BorderSide(
-                        color: Colors.grey,
+                        color: Colors.grey.shade300,
                         width: 2,
                       ),
                     ),
@@ -136,7 +140,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             decoration: BoxDecoration(
               border: Border(
                 bottom: BorderSide(
-                  color: Colors.grey,
+                  color: Colors.grey.shade300,
                   width: 2,
                 ),
               ),
