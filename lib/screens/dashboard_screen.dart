@@ -40,207 +40,204 @@ class _DashboardScreenState extends State<DashboardScreen> {
           )
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 100,
-            decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Colors.grey.shade300,
-                  width: 2,
-                ),
-                top: BorderSide(
-                  color: Colors.grey.shade300,
-                  width: 2,
-                ),
+          Column(
+            children: [
+              SizedBox(
+                height: 20,
               ),
-            ),
-            child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 110,
-                  // margin: EdgeInsets.only(right: 8, left: 8.0),
-                  // decoration: BoxDecoration(
-                  //   border: Border(
-                  //     right: BorderSide(
-                  //       color: Colors.grey,
-                  //       width: 2,
-                  //     ),
-                  //   ),
-                  // ),
-                  child: Column(
-                    // crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '25',
-                        style: TextStyle(fontSize: 25.0),
-                      ),
-                      Text(
-                        'Workouts completed',
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 110,
-                  // margin: EdgeInsets.only(right: 8, left: 8.0),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      right: BorderSide(
-                        color: Colors.grey.shade300,
-                        width: 2,
-                      ),
-                      left: BorderSide(
-                        color: Colors.grey.shade300,
-                        width: 2,
-                      ),
+              Container(
+                height: 100,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.grey.shade300,
+                      width: 2,
+                    ),
+                    top: BorderSide(
+                      color: Colors.grey.shade300,
+                      width: 2,
                     ),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        '103',
-                        style: TextStyle(fontSize: 25.0),
-                      ),
-                      Text(
-                        'Workouts completed',
-                        textAlign: TextAlign.center,
-                      )
-                    ],
-                  ),
                 ),
-                Container(
-                  width: 110,
-                  // margin: EdgeInsets.only(right: 8, left: 8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '70Kg',
-                        style: TextStyle(fontSize: 25.0),
-                      ),
-                      Text(
-                        'Workouts completed',
-                        textAlign: TextAlign.center,
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 100,
-            decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Colors.grey.shade300,
-                  width: 2,
-                ),
-              ),
-            ),
-            padding: EdgeInsets.only(left: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      height: 85,
-                      width: 70,
-                      margin: EdgeInsets.only(right: 20),
-                      decoration: BoxDecoration(color: Colors.amberAccent),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text('22'),
-                          Text('MAY'),
-                        ],
-                      ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                child: Center(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(
-                          'Previous workout',
-                          style: TextStyle(
-                            fontSize: 16,
+                        Container(
+                          width: 110,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '25',
+                                style: TextStyle(fontSize: 25.0),
+                              ),
+                              Text(
+                                'Workouts completed',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
                         ),
-                        Text(
-                          'Quad & Deltoids',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                        Container(
+                          width: 110,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              right: BorderSide(
+                                color: Colors.grey.shade300,
+                                width: 2,
+                              ),
+                              left: BorderSide(
+                                color: Colors.grey.shade300,
+                                width: 2,
+                              ),
+                            ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                '103',
+                                style: TextStyle(fontSize: 25.0),
+                              ),
+                              Text(
+                                'Workouts completed',
+                                textAlign: TextAlign.center,
+                              )
+                            ],
                           ),
                         ),
-                        Text(
-                          '7 exercises completed',
-                          style: TextStyle(
-                            fontSize: 13,
+                        Container(
+                          width: 110,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '70Kg',
+                                style: TextStyle(fontSize: 25.0),
+                              ),
+                              Text(
+                                'Workouts completed',
+                                textAlign: TextAlign.center,
+                              )
+                            ],
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
-                Container(
-                  child: Icon(
-                    Icons.keyboard_arrow_right_outlined,
-                    size: 35,
                   ),
-                )
-              ],
-            ),
-          ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'MY WORKOUT',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.grey.shade600),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Show All',
-                        style: TextStyle(fontSize: 19),
-                      ),
-                    ),
-                  ],
                 ),
               ),
               Container(
-                height: 200,
-                width: double.infinity,
-                margin: EdgeInsets.only(left: 20, right: 20),
-                decoration: BoxDecoration(color: Colors.grey.shade300),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                height: 100,
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.grey.shade300,
+                      width: 2,
+                    ),
+                  ),
+                ),
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('data'),
+                    Row(
+                      children: [
+                        Container(
+                          height: 85,
+                          width: 70,
+                          margin: EdgeInsets.only(right: 20),
+                          decoration: BoxDecoration(color: Colors.amberAccent),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text('22'),
+                              Text('MAY'),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Previous workout',
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              'Quad & Deltoids',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              '7 exercises completed',
+                              style: TextStyle(
+                                fontSize: 13,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Container(
+                      child: Icon(
+                        Icons.keyboard_arrow_right_outlined,
+                        size: 35,
+                      ),
+                    )
                   ],
                 ),
+              ),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'MY WORKOUT',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.grey.shade600),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Show All',
+                            style: TextStyle(fontSize: 19),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 200,
+                    width: double.infinity,
+                    margin: EdgeInsets.only(left: 20, right: 20),
+                    decoration: BoxDecoration(color: Colors.grey.shade300),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('data'),
+                      ],
+                    ),
+                  )
+                ],
               )
             ],
           )
