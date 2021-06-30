@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'screens/dashboard_screen.dart';
-import 'screens/statistic_screen.dart';
+// import 'screens/dashboard_screen.dart';
+// import 'screens/statistic_screen.dart';
+import 'screens/tabs_screen.dart';
 import 'utils/app_routes.dart';
 
 void main() {
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromRGBO(255, 255, 255, 1),
       ),
       routes: {
-        AppRoutes.HOME: (ctx) => DashboardScreen(),
-        AppRoutes.STATISTIC: (ctx) => StatisticScreen(),
+        AppRoutes.HOME: (ctx) => TabScreen(),
+        // AppRoutes.STATISTIC: (ctx) => StatisticScreen(),
       },
     );
   }
