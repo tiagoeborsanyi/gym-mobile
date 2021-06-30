@@ -8,6 +8,15 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+  int _selectedScreenIndex = 0;
+  late List<dynamic> _screens;
+
+  @override
+  void initState() {
+    super.initState();
+    _screens = [];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

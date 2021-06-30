@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/dashboard_screen.dart';
+import 'screens/statistic_screen.dart';
 import 'utils/app_routes.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         AppRoutes.HOME: (ctx) => DashboardScreen(),
+        AppRoutes.STATISTIC: (ctx) => StatisticScreen(),
       },
     );
   }
