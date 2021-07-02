@@ -6,7 +6,7 @@ class GlobalSquads extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Specific'),
+      child: Text('Global'),
     );
   }
 }

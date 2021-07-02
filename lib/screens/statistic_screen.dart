@@ -26,10 +26,10 @@ class StatisticScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
+            GlobalSquads(),
             Center(
-              child: Text('Global'),
+              child: Text('Specific'),
             ),
-            GlobalSquads()
           ],
         ),
       ),
