@@ -21,18 +21,22 @@ class _TabScreenState extends State<TabScreen> {
       {
         'title': 'Dashboard',
         'screen': DashboardScreen(),
+        'action': 'person',
       },
       {
-        'title': 'Statistics',
+        'title': '',
         'screen': StatisticScreen(),
+        'action': 'share',
       },
       {
         'title': 'List Exercises',
         'screen': Center(child: Text('List Exercises')),
+        'action': '',
       },
       {
         'title': 'Configurations',
         'screen': Center(child: Text('Config screen')),
+        'action': '',
       }
     ];
   }
@@ -58,21 +62,29 @@ class _TabScreenState extends State<TabScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
-          Container(
-            width: 50,
-            height: 50,
-            // color: Colors.amber,
-            margin: EdgeInsets.only(right: 20),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey.shade400,
+          if (_screens[_selectedScreenIndex]['action'] == 'person')
+            Container(
+              width: 50,
+              height: 50,
+              // color: Colors.amber,
+              margin: EdgeInsets.only(right: 20),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey.shade400,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.person),
+                tooltip: 'Profile',
+                onPressed: () {},
+              ),
             ),
-            child: IconButton(
-              icon: Icon(Icons.person),
-              tooltip: 'Profile',
-              onPressed: () {},
-            ),
-          )
+          if (_screens[_selectedScreenIndex]['action'] == 'Share')
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Share',
+                  style: TextStyle(color: Theme.of(context).primaryColor),
+                ))
         ],
       ),
       body: _screens[_selectedScreenIndex]['screen'],

@@ -5,8 +5,34 @@ class StatisticScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('statistic screen'),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Statistics'),
+          backgroundColor: Theme.of(context).accentColor,
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                text: 'Global Squads',
+              ),
+              Tab(
+                text: 'Exercise Specific',
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            Center(
+              child: Text('Global'),
+            ),
+            Center(
+              child: Text('Specific'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
