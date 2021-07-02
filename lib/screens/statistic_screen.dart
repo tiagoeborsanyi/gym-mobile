@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/global_squads.dart';
+
 class StatisticScreen extends StatelessWidget {
   const StatisticScreen({Key? key}) : super(key: key);
 
@@ -27,9 +29,7 @@ class StatisticScreen extends StatelessWidget {
             Center(
               child: Text('Global'),
             ),
-            Center(
-              child: Text('Specific'),
-            ),
+            GlobalSquads()
           ],
         ),
       ),
