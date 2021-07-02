@@ -123,13 +123,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         height: 85,
                         width: 70,
                         margin: EdgeInsets.only(right: 20),
-                        decoration: BoxDecoration(color: Colors.amberAccent),
+                        decoration:
+                            BoxDecoration(color: Theme.of(context).accentColor),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('22'),
-                            Text('MAY'),
+                            Text(
+                              '22',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              'MAY',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ],
                         ),
                       ),
