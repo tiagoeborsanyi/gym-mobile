@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// import 'screens/dashboard_screen.dart';
-// import 'screens/statistic_screen.dart';
 import 'screens/tabs_screen.dart';
 import 'utils/app_routes.dart';
 

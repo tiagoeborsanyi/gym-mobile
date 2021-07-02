@@ -4,15 +4,13 @@ import 'dashboard_screen.dart';
 import 'statistic_screen.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({Key? key}) : super(key: key);
-
   @override
   _TabScreenState createState() => _TabScreenState();
 }
 
 class _TabScreenState extends State<TabScreen> {
   int _selectedScreenIndex = 0;
-  late List<Map<String, dynamic>> _screens;
+  List<Map<String, dynamic>> _screens;
 
   @override
   void initState() {
