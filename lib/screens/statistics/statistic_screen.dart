@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/global_squads.dart';
+import 'components/global_squads.dart';
 
 class StatisticScreen extends StatelessWidget {
   @override
