@@ -76,7 +76,7 @@ class _TabScreenState extends State<TabScreen> {
                 onPressed: () {},
               ),
             ),
-          if (_screens[_selectedScreenIndex]['action'] == 'Share')
+          if (_screens[_selectedScreenIndex]['action'] == 'share')
             TextButton(
                 onPressed: () {},
                 child: Text(

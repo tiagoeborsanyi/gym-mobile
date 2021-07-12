@@ -6,6 +6,11 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+  final data = [
+    {'num': '25', 'text': 'Workouts\n completed'},
+    {'num': '103', 'text': 'Workouts\n completed'},
+    {'num': '70Kg', 'text': 'Workouts\n completed'},
+  ];
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -30,76 +35,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ),
               ),
-              child: Center(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        width: 110,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '25',
-                              style: TextStyle(fontSize: 25.0),
-                            ),
-                            Text(
-                              'Workouts completed',
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 110,
-                        decoration: BoxDecoration(
-                          border: Border(
-                            right: BorderSide(
-                              color: Colors.grey.shade300,
-                              width: 2,
-                            ),
-                            left: BorderSide(
-                              color: Colors.grey.shade300,
-                              width: 2,
-                            ),
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              '103',
-                              style: TextStyle(fontSize: 25.0),
-                            ),
-                            Text(
-                              'Workouts completed',
-                              textAlign: TextAlign.center,
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 110,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '70Kg',
-                              style: TextStyle(fontSize: 25.0),
-                            ),
-                            Text(
-                              'Workouts completed',
-                              textAlign: TextAlign.center,
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: data.length,
+                itemBuilder: (context, index) => buildItemDash(context, index),
               ),
             ),
             Container(
@@ -217,6 +156,40 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ],
         )
       ],
+    );
+  }
+
+  Widget buildItemDash(BuildContext context, int index) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width / 3,
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            right: BorderSide(
+              color: Colors.grey.shade300,
+              width: index == 1 ? 2 : 0,
+            ),
+            left: BorderSide(
+              color: Colors.grey.shade300,
+              width: index == 1 ? 2 : 0,
+            ),
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              data[index]['num'],
+              style: TextStyle(fontSize: 25.0),
+            ),
+            Text(
+              'Workouts\n completed',
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
